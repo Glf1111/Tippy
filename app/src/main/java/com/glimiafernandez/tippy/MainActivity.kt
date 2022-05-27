@@ -1,6 +1,7 @@
 package com.glimiafernandez.tippy
 
 import android.os.Bundle
+import android.service.autofill.Validators.or
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var amountSplit: TextView
     private lateinit var totalSplit: TextView
     private var amountStatus : Double = 0.0
-
+    private var etBaseNull :Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -151,17 +152,26 @@ class MainActivity : AppCompatActivity() {
         tvTotalAmount.text = "%.2f".format(totalAmount)
 
         amountStatus = totalAmount
+        etBaseNull = baseAmount
 
 
     }
 
 
-    private fun amountSplitBill(double: Double) {
+        fun amountSplitBill(double: Double) {
+
+
             if (etBaseAmount.text.isEmpty() or etSplitPersons.text.isEmpty()){
-               amountSplit.text = " "
+                amountSplit.text = " "
                 return
             }
             val numPersons = etSplitPersons.text.toString().toDouble()
+
+            if ( (etBaseNull == 0.0) or (numPersons == 0.0)){
+                amountSplit.text = " "
+                return
+            }
+
             val splitTotal = double / numPersons
 
             amountSplit.text = "%.2f".format(splitTotal)
