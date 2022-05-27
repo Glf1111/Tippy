@@ -108,16 +108,21 @@
         android:layout_marginTop="32dp"
         android:text="Persons"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="@+id/questionSplit"
-        app:layout_constraintTop_toBottomOf="@+id/questionSplit" />
+        app:layout_constraintEnd_toEndOf="@+id/total_label"
+        app:layout_constraintTop_toBottomOf="@+id/questionSplit"
+        android:visibility="invisible"/>
 
     <EditText
-        android:id="@+id/totalPersons"
+        android:id="@+id/etsplitPersons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="340dp"
-        tools:text="45" />
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/numPersons"
+        app:layout_constraintStart_toStartOf="@id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/numPersons"
+        tools:text="45"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/questionSplit"
@@ -129,11 +134,38 @@
         app:layout_constraintStart_toStartOf="@+id/total_label"/>
 
     <Switch
-        android:id="@+id/switchBillsplit"
+        android:id="@+id/switchBillSplit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="295dp"
-        tools:layout_editor_absoluteY="281dp" />
+        android:layout_marginStart="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/questionSplit"
+        app:layout_constraintStart_toEndOf="@+id/questionSplit"
+        app:layout_constraintTop_toTopOf="@+id/questionSplit"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/totalSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/numPersons"
+        app:layout_constraintTop_toBottomOf="@+id/numPersons"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/amountSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/totalSplit"
+        app:layout_constraintBottom_toBottomOf="@id/totalSplit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="24"
+        android:visibility="invisible"/>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
