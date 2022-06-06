@@ -24,14 +24,10 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="C:\Android_Projects\Tippy\Funcionality_gif.gif"/>
+![](C:\Android_Projects\Tippy\Funcionality_gif.gif)
 
 
 
-
-
-
-.
 ## License
 
     Copyright [2022] [Gerardo Limia]
