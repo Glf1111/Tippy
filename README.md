@@ -23,7 +23,8 @@ The following **extensions** are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](Funcionality_gif.gif)
+![Funcionality_gif](https://user-images.githubusercontent.com/21244466/172373127-78ed7732-60cc-4a3a-8f31-38355dcbec19.gif)
+
 
 
 
