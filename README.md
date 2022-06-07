@@ -24,7 +24,7 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](C:\Android_Projects\Tippy\Funcionality_gif.gif)
+
 
 
 
