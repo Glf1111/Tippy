@@ -23,7 +23,7 @@ The following **extensions** are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
+![](../../Users/geryl/OneDrive/Imágenes/Funcionality_gif.gif)
 
 
 
